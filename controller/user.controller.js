@@ -14,6 +14,7 @@ class User{
 
     getUserDetails(req,res){
         const params = req.params
+        console.log("params");
         return userService.getUserDetails(params).then(data=>{
             if(data){
                 return res.json({"statusCode":200,"AllCategories":data,"message":"successfully"})
